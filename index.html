@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Miners 1928 - Design Concepts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0a;
+            color: #f5f0e8;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            color: #888;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .concepts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .card {
+            border: 1px solid #2a2a2a;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #c9a96e;
+        }
+
+        .card-preview {
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            letter-spacing: 0.1em;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-preview::after {
+            content: 'VIEW DESIGN';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 12px;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            background: rgba(0,0,0,0.6);
+        }
+
+        .card:hover .card-preview::after {
+            opacity: 1;
+        }
+
+        /* Concept A: Dark Luxury */
+        .card-a .card-preview {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+            color: #c9a96e;
+            border-bottom: 2px solid #c9a96e;
+        }
+
+        /* Concept B: Modern Clean */
+        .card-b .card-preview {
+            background: linear-gradient(135deg, #fafafa 0%, #e8e2d9 50%, #fafafa 100%);
+            color: #2d5a47;
+            border-bottom: 2px solid #2d5a47;
+        }
+
+        /* Concept C: Warm Editorial */
+        .card-c .card-preview {
+            background: linear-gradient(135deg, #f5f0eb 0%, #e8ddd0 50%, #f5f0eb 100%);
+            color: #6b1d1d;
+            border-bottom: 2px solid #b87333;
+        }
+
+        .card-body {
+            padding: 28px;
+        }
+
+        .card-body h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 6px;
+        }
+
+        .card-body .label {
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .card-a .label { color: #c9a96e; }
+        .card-b .label { color: #2d5a47; }
+        .card-c .label { color: #b87333; }
+
+        .card-body p {
+            font-size: 0.88rem;
+            line-height: 1.7;
+            color: #999;
+        }
+
+        .footer-note {
+            margin-top: 60px;
+            font-size: 0.8rem;
+            color: #555;
+            text-align: center;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <h1>The Miners 1928</h1>
+    <p class="subtitle">Design Concepts</p>
+
+    <div class="concepts">
+        <a href="designs/concept-a/index.html" class="card card-a">
+            <div class="card-preview">M | 1928</div>
+            <div class="card-body">
+                <h2>Gilded Heritage</h2>
+                <span class="label">Concept A</span>
+                <p>Dark, dramatic luxury. Black backgrounds with rich gold accents. Cinematic scroll animations. Film-grain texture overlay. The feeling of stepping into a grand hotel lobby at midnight.</p>
+            </div>
+        </a>
+
+        <a href="designs/concept-b/index.html" class="card card-b">
+            <div class="card-preview">M | 1928</div>
+            <div class="card-body">
+                <h2>Anthracite Modern</h2>
+                <span class="label">Concept B</span>
+                <p>Clean, airy, editorial. Generous white space with warm stone grays and deep teal accents. Asymmetric layouts. The typography does the heavy lifting. Architectural Digest meets boutique hotel.</p>
+            </div>
+        </a>
+
+        <a href="designs/concept-c/index.html" class="card card-c">
+            <div class="card-preview">M | 1928</div>
+            <div class="card-body">
+                <h2>Industrial Luxe</h2>
+                <span class="label">Concept C</span>
+                <p>Warm, story-driven, editorial. Cream backgrounds with burgundy and copper. Magazine-style pull quotes. Horizontal scroll gallery. Reads like a luxury travel feature about a hidden gem.</p>
+            </div>
+        </a>
+    </div>
+
+    <p class="footer-note">
+        Each concept is a complete single-page scrolling site with all content sections: history, venue, weddings, hotel, conference, spa, location guide, and contact. Click any card to view the full design.
+    </p>
+</body>
+</html>
