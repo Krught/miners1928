@@ -1313,6 +1313,24 @@
             transform: scale(1.03);
         }
 
+        /* Editorial grid: tall portrait left + two landscape right */
+        .image-editorial-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 6px;
+            height: 700px;
+        }
+
+        .image-editorial-grid .editorial-portrait {
+            grid-row: 1 / 3;
+        }
+
+        .image-editorial-grid .image-container,
+        .image-editorial-grid .image-placeholder {
+            height: 100%;
+        }
+
         /* ============================================================
            UTILITY
            ============================================================ */
@@ -1415,6 +1433,10 @@
                 max-height: 700px;
             }
 
+            .image-editorial-grid {
+                height: 550px;
+            }
+
             .image-hero-full {
                 height: 420px;
             }
@@ -1458,6 +1480,21 @@
 
             .image-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .image-editorial-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto;
+                height: auto;
+            }
+
+            .image-editorial-grid .editorial-portrait {
+                grid-row: auto;
+                height: 500px;
+            }
+
+            .image-editorial-grid .image-placeholder {
+                height: 280px;
             }
 
             .image-grid .image-placeholder,
@@ -1552,6 +1589,14 @@
             .btn {
                 padding: 14px 32px;
                 font-size: 0.65rem;
+            }
+
+            .image-editorial-grid .editorial-portrait {
+                height: 400px;
+            }
+
+            .image-editorial-grid .image-placeholder {
+                height: 220px;
             }
 
             .image-full,
@@ -1957,8 +2002,8 @@
     <!-- PHOTO: The Grand Hall set up for an event, showing the full ceiling height, skylight, and chandeliers -->
     <div class="image-section">
         <div class="image-section-padded">
-            <div class="image-container image-container-portrait reveal">
-                <img src="../../images/GarnetDahlia-6074.JPG" alt="Bride and groom standing in The Grand Hall with towering limestone arches and columns, ceiling height visible, tables set around them" loading="lazy">
+            <div class="image-container image-container-full reveal">
+                <img src="../../images/GarnetDahlia-6071.JPG" alt="Bride and groom standing in The Grand Hall with towering limestone arches and columns, tables set around them" loading="lazy">
             </div>
         </div>
     </div>
@@ -2034,21 +2079,14 @@
         </div>
     </section>
 
-    <!-- PHOTO: The Grand Hall set for a wedding reception -->
+    <!-- PHOTO: Wedding editorial grid — portrait left, two landscape right -->
     <div class="image-section">
         <div class="image-section-padded">
-            <div class="image-container image-container-portrait reveal">
-                <img src="../../images/GarnetDahlia-0201.JPG" alt="Bride and groom in The Grand Hall, groom kissing bride's hand, with massive limestone walls, tables set up, and dramatic uplighting behind them" loading="lazy">
-            </div>
-        </div>
-    </div>
-
-    <div style="height: 4px;"></div>
-
-    <!-- PHOTO: Wedding details -->
-    <div class="image-section">
-        <div class="image-section-padded">
-            <div class="image-grid reveal">
+            <div class="image-editorial-grid reveal">
+                <!-- Portrait: Bride & groom hand-kiss in Grand Hall -->
+                <div class="image-container editorial-portrait">
+                    <img src="../../images/GarnetDahlia-0201.JPG" alt="Bride and groom in The Grand Hall, groom kissing bride's hand, with massive limestone walls, tables set up, and dramatic uplighting behind them" loading="lazy">
+                </div>
                 <!-- PHOTO: Ceremony beneath the skylight -->
                 <div class="image-placeholder">
                     <span>Ceremony beneath the skylight</span>
