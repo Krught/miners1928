@@ -406,13 +406,13 @@
         }
 
         .nav-brand {
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            font-weight: 400;
-            letter-spacing: 0.1em;
-            color: var(--ivory);
-            text-transform: uppercase;
-            white-space: nowrap;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-brand img {
+            height: 50px;
+            width: auto;
         }
 
         .nav-links {
@@ -1639,8 +1639,8 @@
                 padding: 1.5rem 0;
             }
 
-            .nav-brand {
-                font-size: 0.9rem;
+            .nav-brand img {
+                height: 40px;
             }
 
             .nav-phone {
@@ -1655,7 +1655,7 @@
          NAVIGATION
          ============================================================ -->
     <nav class="nav" id="nav">
-        <a href="#hero" class="nav-brand">The Miners 1928</a>
+        <a href="#hero" class="nav-brand"><img src="../../images/the_miners_logo.png" alt="The Miners 1928"></a>
         <ul class="nav-links">
             <li><a href="#hero">Home</a></li>
             <li><a href="#about">About</a></li>

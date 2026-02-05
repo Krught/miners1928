@@ -326,19 +326,13 @@
         }
 
         .nav__logo {
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            font-weight: 500;
-            color: var(--cream);
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            white-space: nowrap;
-            transition: color var(--transition-smooth);
+            display: flex;
+            align-items: center;
         }
 
-        .nav__logo span {
-            color: var(--gold);
-            font-weight: 400;
+        .nav__logo img {
+            height: 50px;
+            width: auto;
         }
 
         .nav__links {
@@ -1958,7 +1952,7 @@
          NAVIGATION
          ============================================================ -->
     <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
-        <a href="#home" class="nav__logo">The Miners <span>1928</span></a>
+        <a href="#home" class="nav__logo"><img src="../../images/the_miners_logo.png" alt="The Miners 1928"></a>
         <ul class="nav__links">
             <li><a href="#home">Home</a></li>
             <li><a href="#story">Our Story</a></li>
