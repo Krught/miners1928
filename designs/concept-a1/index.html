@@ -423,23 +423,19 @@
             overflow: hidden;
         }
 
-        /* Replace with actual venue photo */
         .hero__bg {
             position: absolute;
             inset: 0;
-            background:
-                radial-gradient(ellipse at 50% 30%, rgba(201, 169, 110, 0.08) 0%, transparent 60%),
-                radial-gradient(ellipse at 20% 80%, rgba(201, 169, 110, 0.04) 0%, transparent 50%),
-                linear-gradient(180deg,
-                    rgba(5, 5, 5, 0.3) 0%,
-                    rgba(10, 10, 10, 0.1) 30%,
-                    rgba(10, 10, 10, 0.2) 60%,
-                    rgba(10, 10, 10, 0.8) 100%
-                ),
-                linear-gradient(135deg, #0d0b08 0%, #1a1510 25%, #0f0d0a 50%, #151210 75%, #0a0908 100%);
-            background-size: cover;
+            overflow: hidden;
             transform: scale(1.05);
             animation: heroZoom 20s ease-in-out infinite alternate;
+        }
+
+        .hero__bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 60%;
         }
 
         @keyframes heroZoom {
@@ -835,16 +831,17 @@
             justify-content: center;
         }
 
-        /* Replace with actual venue photo */
         .image-break__bg {
             position: absolute;
             inset: -20%;
-            background:
-                radial-gradient(ellipse at 50% 50%, rgba(201, 169, 110, 0.06) 0%, transparent 70%),
-                linear-gradient(135deg, #12100d 0%, #1f1a14 30%, #0d0b09 60%, #171411 100%);
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
+            overflow: hidden;
+        }
+
+        .image-break__bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
         }
 
         .image-break__overlay {
@@ -910,14 +907,16 @@
             transform: translateY(-4px);
         }
 
-        /* Replace with actual venue photos */
         .space-card__image {
             height: 350px;
-            background:
-                linear-gradient(180deg, transparent 40%, rgba(10, 10, 10, 0.95) 100%),
-                radial-gradient(ellipse at 50% 30%, rgba(201, 169, 110, 0.08) 0%, transparent 60%),
-                linear-gradient(135deg, #15120f 0%, #1e1a15 50%, #0f0d0b 100%);
             position: relative;
+            overflow: hidden;
+        }
+
+        .space-card__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .space-card__content {
@@ -997,14 +996,18 @@
             overflow: hidden;
         }
 
-        /* Replace with actual wedding photo */
         .weddings__bg {
             position: absolute;
             inset: 0;
-            background:
-                radial-gradient(ellipse at 30% 50%, rgba(201, 169, 110, 0.05) 0%, transparent 50%),
-                radial-gradient(ellipse at 70% 30%, rgba(201, 169, 110, 0.03) 0%, transparent 50%),
-                linear-gradient(180deg, var(--black) 0%, #11100e 20%, #151310 50%, #0f0e0c 80%, var(--black) 100%);
+            overflow: hidden;
+        }
+
+        .weddings__bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 60%;
+            opacity: 0.2;
         }
 
         .weddings__content {
@@ -1149,14 +1152,18 @@
             background: var(--gold);
         }
 
-        /* Replace with actual room photo */
         .hotel__image {
             height: 500px;
-            background:
-                radial-gradient(ellipse at 50% 50%, rgba(201, 169, 110, 0.05) 0%, transparent 60%),
-                linear-gradient(135deg, #18150f 0%, #201c16 50%, #12100d 100%);
             border: 1px solid rgba(201, 169, 110, 0.08);
             position: relative;
+            overflow: hidden;
+        }
+
+        .hotel__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
         }
 
         .hotel__image-label {
@@ -1988,8 +1995,9 @@
          HERO SECTION
          ============================================================ -->
     <section class="hero" id="home">
-        <!-- Replace with actual hero image of the building exterior at night -->
-        <div class="hero__bg" aria-hidden="true"></div>
+        <div class="hero__bg" aria-hidden="true">
+            <img src="../../images/GarnetDahlia-1375.JPG" alt="The Grand Hall at The Miners 1928, featuring soaring vaulted ceilings, marble floors, and tables set for a wedding reception" style="object-position: center 60%;">
+        </div>
         <div class="hero__overlay" aria-hidden="true"></div>
         <div class="hero__frame" aria-hidden="true"></div>
 
@@ -2280,9 +2288,10 @@
     <!-- ============================================================
          IMAGE BREAK / QUOTE
          ============================================================ -->
-    <!-- Replace with actual wide-angle interior photo -->
-    <div class="image-break">
-        <div class="image-break__bg" aria-hidden="true"></div>
+    <div class="image-break" style="height: auto; aspect-ratio: 3/2; max-height: 80vh;">
+        <div class="image-break__bg" aria-hidden="true">
+            <img src="../../images/GarnetDahlia-6071.JPG" alt="A couple standing in the Grand Hall surrounded by limestone arches and elegantly set tables" style="object-position: center center;">
+        </div>
         <div class="image-break__overlay" aria-hidden="true"></div>
         <div class="image-break__content reveal">
             <p class="image-break__quote">
@@ -2310,8 +2319,9 @@
 
                 <!-- The Grand Hall -->
                 <div class="space-card reveal reveal-left">
-                    <!-- Replace with actual Grand Hall photo -->
-                    <div class="space-card__image" aria-label="The Grand Hall event space"></div>
+                    <div class="space-card__image" aria-label="The Grand Hall event space">
+                        <img src="../../images/GarnetDahlia-1372.JPG" alt="Aerial view of the Grand Hall from the mezzanine level, showing the full scope of the vaulted ceilings and marble floors" style="object-position: center center;">
+                    </div>
                     <div class="space-card__content">
                         <span class="space-card__label">Main Bank Lobby</span>
                         <h3 class="space-card__title">The Grand Hall</h3>
@@ -2342,8 +2352,9 @@
 
                 <!-- The Gallery -->
                 <div class="space-card reveal reveal-right">
-                    <!-- Replace with actual Gallery photo -->
-                    <div class="space-card__image" aria-label="The Gallery event space"></div>
+                    <div class="space-card__image" aria-label="The Gallery event space">
+                        <img src="../../images/GarnetDahlia-0005.JPG" alt="Elegant table setting with gold chiavari chairs, tall floral centerpieces, and limestone walls in the background" style="object-position: center center;">
+                    </div>
                     <div class="space-card__content">
                         <span class="space-card__label">Intimate Gathering Space</span>
                         <h3 class="space-card__title">The Gallery</h3>
@@ -2394,8 +2405,9 @@
          WEDDINGS SECTION
          ============================================================ -->
     <section class="weddings section" id="weddings">
-        <!-- Replace with actual wedding ceremony/reception photo -->
-        <div class="weddings__bg" aria-hidden="true"></div>
+        <div class="weddings__bg" aria-hidden="true">
+            <img src="../../images/GarnetDahlia-0201.JPG" alt="Bride and groom in the Grand Hall, groom kissing the bride's hand under dramatic uplighting" style="object-position: center 60%;">
+        </div>
         <div class="weddings__content container">
             <div class="weddings__header reveal">
                 <span class="section-label">Weddings</span>
@@ -2505,9 +2517,9 @@
                     <span class="intro__opening" style="font-size: 0.85rem;">Opening Spring 2026</span>
                 </div>
 
-                <!-- Replace with actual room photo -->
                 <div class="hotel__image reveal reveal-right" aria-label="Luxury hotel room">
-                    <span class="hotel__image-label">Artist rendering &mdash; Rooms opening Spring 2026</span>
+                    <img src="../../images/R93hvQce-Modern-Moments.webp" alt="Bridal getting-ready suite featuring exposed brick walls and modern furnishings" style="object-position: center center;">
+                    <span class="hotel__image-label">Bridal Suite &mdash; Opening Spring 2026</span>
                 </div>
             </div>
         </div>
@@ -2570,9 +2582,10 @@
     <!-- ============================================================
          IMAGE BREAK / QUOTE 2
          ============================================================ -->
-    <!-- Replace with actual spa or interior detail photo -->
     <div class="image-break">
-        <div class="image-break__bg" style="background: radial-gradient(ellipse at 50% 50%, rgba(201, 169, 110, 0.04) 0%, transparent 70%), linear-gradient(135deg, #100e0b 0%, #1a1610 30%, #0e0c0a 60%, #15120f 100%); background-attachment: fixed;" aria-hidden="true"></div>
+        <div class="image-break__bg" aria-hidden="true">
+            <img src="../../images/GarnetDahlia-6244.JPG" alt="Bride on the mezzanine balcony with ornate iron railing and marble columns" style="object-position: center 60%;">
+        </div>
         <div class="image-break__overlay" aria-hidden="true"></div>
         <div class="image-break__content reveal">
             <p class="image-break__quote">
