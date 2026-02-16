@@ -7,7 +7,7 @@
     <meta name="description" content="The Miners 1928 - A luxury hotel, event venue, and day spa in a meticulously restored 1928 bank building designed by Cass Gilbert. Opening Spring 2026 in Pottsville, Pennsylvania.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Cormorant+Garabmond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Raleway:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Raleway:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <style>
         /* ============================================================
            THE MINERS 1928 - "Gilded Heritage" Design Concept
@@ -510,6 +510,18 @@
             animation: fadeInUp 1.2s ease 0.6s forwards;
         }
 
+        .hero__descriptor {
+            display: block;
+            font-family: var(--font-body);
+            font-size: clamp(0.7rem, 1vw, 0.85rem);
+            font-weight: 400;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-top: 12px;
+            margin-bottom: 4px;
+        }
+
         .hero__title span {
             display: block;
             font-family: var(--font-subheading);
@@ -767,6 +779,35 @@
             border-top: 1px solid rgba(201, 169, 110, 0.1);
             border-bottom: 1px solid rgba(201, 169, 110, 0.1);
             margin: 24px 0;
+        }
+
+        .history-block__image {
+            margin-top: 24px;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid rgba(201, 169, 110, 0.15);
+        }
+
+        .history-block__image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: sepia(0.1);
+            transition: filter var(--transition-smooth);
+        }
+
+        .history-block__image img:hover {
+            filter: sepia(0);
+        }
+
+        .history-block__image-caption {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-style: italic;
+            color: var(--gray-light);
+            text-align: center;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.3);
         }
 
         /* Architectural details grid */
@@ -1999,6 +2040,7 @@
             <p class="hero__est">Established 1828 &nbsp;&bull;&nbsp; Reimagined 2026</p>
             <h1 class="hero__title">
                 The Miners 1928
+                <span class="hero__descriptor">Hotel &nbsp;&bull;&nbsp; Venue &nbsp;&bull;&nbsp; Spa</span>
                 <span>Where Legacy Becomes Luxury</span>
             </h1>
             <div class="hero__rule" aria-hidden="true"></div>
@@ -2023,29 +2065,22 @@
     <section class="intro section" id="intro">
         <div class="container--narrow">
             <div class="reveal">
-                <p class="intro__preheading">Welcome to a Living Piece of American History</p>
+                <p class="intro__preheading">A Destination Worth the Wait</p>
             </div>
             <div class="reveal reveal-delay-1">
-                <h2 class="intro__heading">This Is Not Just a Hotel.</h2>
+                <p class="intro__text">
+                    Every great city deserves a great hotel. Pottsville&mdash;America's original
+                    coal capital, home to the nation's oldest brewery, and keeper of some of
+                    Pennsylvania's most extraordinary architecture&mdash;has been waiting for
+                    nearly two hundred years.
+                </p>
             </div>
             <div class="reveal reveal-delay-2">
-                <p class="intro__text">
-                    Built as the Miners National Bank and designed by the legendary Cass
-                    Gilbert&mdash;the architect behind the Woolworth Building and the U.S.
-                    Supreme Court&mdash;this neoclassical masterpiece opened its doors on
-                    November 7, 1927, to celebrate the bank's centennial. Nearly a century
-                    later, it has been painstakingly restored and beautifully reimagined as
-                    a luxury destination unlike any other in Pennsylvania.
+                <p class="intro__text" style="font-family: var(--font-subheading); font-size: clamp(1.2rem, 1.6vw, 1.5rem); font-style: italic; color: var(--gold); line-height: 1.7;">
+                    The Miners 1928 is worth the wait.
                 </p>
             </div>
             <div class="reveal reveal-delay-3">
-                <p class="intro__text">
-                    Every detail honors the building's extraordinary heritage while introducing
-                    the modern comforts today's discerning guests expect. The result is a place
-                    where history whispers from every surface, and luxury is simply the standard.
-                </p>
-            </div>
-            <div class="reveal reveal-delay-4">
                 <span class="intro__opening">Opening Spring 2026</span>
             </div>
         </div>
@@ -2083,14 +2118,24 @@
                         <div class="history-block__period">The Founding</div>
                     </div>
                     <div class="history-block__content">
+                        <div class="history-block__image" style="max-width: 200px; margin-bottom: 20px; background: var(--cream); padding: 12px; border: none;">
+                            <img src="../../images/287px-PA-Pottsville-Ch649-1927-Ad-minerlogo.jpg" alt="Original Miners National Bank of Pottsville logo, Founded 1828" style="max-height: none; filter: none; width: 100%;">
+                        </div>
                         <h3 class="history-block__title">The Birth of Miners National Bank</h3>
                         <p class="history-block__text">
                             On October 28, 1828&mdash;just eight months after Pottsville became a
                             borough&mdash;the Miners Bank of Pottsville opened its doors. It was one
                             of the earliest financial institutions in Pennsylvania's anthracite coal
-                            region, predating even D.G. Yuengling & Son brewery by a full year. The
+                            region, predating even D.G. Yuengling &amp; Son brewery by a full year. The
                             bank would serve as the financial backbone of one of the most important
                             industrial corridors in American history.
+                        </p>
+                        <p class="history-block__text">
+                            Its founding president, Francis B. Nichols&mdash;a War of 1812 veteran
+                            wounded aboard the USS Chesapeake and a descendant of the first United States
+                            Treasurer&mdash;set the tone for an institution built on service and resolve.
+                            The bank would go on to print its own currency, issuing over $9.6 million
+                            in bank notes and becoming one of the wealthiest national banks in the country.
                         </p>
                     </div>
                 </div>
@@ -2163,6 +2208,10 @@
                             Pluto&mdash;the god of mines&mdash;a fitting tribute to the twin forces
                             that built this region.
                         </p>
+                        <div class="history-block__image">
+                            <img src="../../images/facade.jpg" alt="The neoclassical facade of The Miners 1928 featuring Harvard brick, Georgia marble Doric columns, three-story arched windows, and the original Miners National Bank pediment" style="object-fit: cover; max-height: 500px; width: 100%;">
+                            <div class="history-block__image-caption">The neoclassical facade &mdash; Harvard brick, Georgia marble, and the original pediment</div>
+                        </div>
                     </div>
                 </div>
 
@@ -2183,6 +2232,10 @@
                             institution. Polachek's work can also be found in the collections of the
                             Smithsonian Institution.
                         </p>
+                        <div class="history-block__image">
+                            <img src="../../images/GarnetDahlia-1279.JPG" alt="The monumental ten-foot brass Polachek entrance doors of The Miners 1928" style="object-fit: cover; max-height: 450px; width: 100%;">
+                            <div class="history-block__image-caption">The ten-foot brass doors by John Polachek, 1927</div>
+                        </div>
                     </div>
                 </div>
 
@@ -2205,10 +2258,15 @@
                         </p>
                         <p class="history-block__text">
                             The original bank countertops, crafted from American black walnut and
-                            crowned with dark green marble, still line the hall. Throughout the
+                            crowned with dark green marble, still line the hall. Hand-forged
+                            ironwork by Renner &amp; Maras adorns the space, and throughout the
                             building, fourteen distinct types of marble create a palette of color
                             and texture that no modern material can replicate.
                         </p>
+                        <div class="history-block__image">
+                            <img src="../../images/GarnetDahlia-0005.JPG" alt="The grand interior of The Miners 1928 banking hall with vaulted ceilings, chandeliers, and limestone walls" style="object-fit: cover; max-height: 450px; width: 100%;">
+                            <div class="history-block__image-caption">The Cathedral of Commerce &mdash; the original banking hall</div>
+                        </div>
 
                         <div class="detail-grid">
                             <div class="detail-card">
@@ -2245,6 +2303,10 @@
                             secured the fortunes of a region. Today, restored to its original
                             glory, it stands as one of the building's most awe-inspiring features.
                         </p>
+                        <div class="history-block__image">
+                            <img src="../../images/vault.JPG" alt="The 36-ton vault door showing massive steel gears, locking bolts, and brass cage interior" style="object-fit: cover; max-height: 450px; width: 100%;">
+                            <div class="history-block__image-caption">The 36-ton vault door &mdash; 27 inches of tool-proof steel</div>
+                        </div>
                     </div>
                 </div>
 
@@ -2356,6 +2418,13 @@
                             create an atmosphere that feels both exclusive and welcoming.
                         </p>
                         <p class="space-card__text">
+                            At its heart sits a custom bar with seating for twelve, crowned by a
+                            green marble bar top crafted from the repurposed original bank
+                            counters&mdash;a stunning blend of black walnut, mahogany, and oak.
+                            Surrounding the bar, extraordinary lounge furniture and intimate seating
+                            areas create the perfect setting for conversation and connection.
+                        </p>
+                        <p class="space-card__text">
                             Ideal for more personal occasions&mdash;the celebrations that bring
                             your closest together in a space worthy of the moment.
                         </p>
@@ -2452,12 +2521,40 @@
                 </p>
             </div>
 
+            <div class="weddings__process reveal">
+                <h3 style="font-family: var(--font-display); color: var(--cream); margin-bottom: 20px; font-size: clamp(1.3rem, 2vw, 1.8rem);">Your Journey Begins with a Tour</h3>
+                <p class="wedding-feature__text" style="max-width: 700px; margin: 0 auto 24px; text-align: center;">
+                    It all starts with a personal tour led by one of our venue coordinators, who will
+                    walk you through every detail of what The Miners 1928 has to offer. From the
+                    ceremony to the last dance, they will cover every aspect of your special day:
+                </p>
+                <div style="display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: center; max-width: 600px; margin: 0 auto 24px;">
+                    <span style="font-family: var(--font-subheading); font-size: 1.05rem; color: var(--gold-light);">Catering</span>
+                    <span style="color: var(--gray);">&bull;</span>
+                    <span style="font-family: var(--font-subheading); font-size: 1.05rem; color: var(--gold-light);">Bar Options</span>
+                    <span style="color: var(--gray);">&bull;</span>
+                    <span style="font-family: var(--font-subheading); font-size: 1.05rem; color: var(--gold-light);">Decor Decisions</span>
+                    <span style="color: var(--gray);">&bull;</span>
+                    <span style="font-family: var(--font-subheading); font-size: 1.05rem; color: var(--gold-light);">Outside Vendors</span>
+                    <span style="color: var(--gray);">&bull;</span>
+                    <span style="font-family: var(--font-subheading); font-size: 1.05rem; color: var(--gold-light);">Picking the Perfect Day</span>
+                </div>
+                <p class="wedding-feature__text" style="max-width: 700px; margin: 0 auto; text-align: center;">
+                    Our team takes as much time as needed to answer your questions, walk through
+                    your vision, and ensure every detail is exactly as you imagine it. Your
+                    wedding deserves nothing less.
+                </p>
+                <p style="font-family: var(--font-body); font-size: 0.85rem; color: var(--gray-light); margin-top: 20px; text-align: center;">
+                    Contact us at <a href="mailto:info@theminers1928.com" style="color: var(--gold);">info@theminers1928.com</a> to schedule your tour.
+                </p>
+            </div>
+
             <div class="weddings__cta reveal">
                 <p style="font-family: var(--font-subheading); font-size: 1.05rem; font-style: italic; color: var(--gold); margin-bottom: 8px;">
                     Now booking June 2026 and beyond
                 </p>
                 <br>
-                <a href="#contact" class="btn">Plan Your Wedding</a>
+                <a href="mailto:info@theminers1928.com" class="btn">Plan Your Wedding</a>
             </div>
         </div>
     </section>
@@ -2473,10 +2570,17 @@
                     <h2>Sleep Inside History</h2>
                     <div class="gold-rule gold-rule--left"></div>
                     <p>
-                        The Miners 1928 will offer 30 luxury guest rooms, each one a
-                        thoughtful blend of historic character and modern comfort. Original
-                        architectural details meet contemporary design, premium bedding, and
-                        every amenity today's traveler expects.
+                        Here is what makes The Miners 1928 unlike any hotel you've stayed in: the building
+                        is a century-old Cass Gilbert masterpiece, meticulously preserved. But the rooms?
+                        Every single one is built entirely from scratch&mdash;designed and constructed from
+                        the ground up within the historic shell. New walls. New electrical. New plumbing.
+                        New climate systems. New fixtures, new finishes, new everything.
+                    </p>
+                    <p>
+                        The result is a collision of old and new that you can feel the moment you open the
+                        door: the patina of a century-old landmark, the comfort of a hotel that opened
+                        yesterday. Thirty luxury guest rooms, each one a thoughtful blend of historic
+                        character and modern comfort.
                     </p>
                     <p>
                         Set in the heart of downtown Pottsville, you're steps from some of
@@ -2509,7 +2613,7 @@
                 </div>
 
                 <div class="hotel__image reveal reveal-right" aria-label="Luxury hotel room">
-                    <img src="../../images/R93hvQce-Modern-Moments.webp" alt="Bridal getting-ready suite featuring exposed brick walls and modern furnishings" style="object-position: center center;">
+                    <img src="../../images/bridal_tub.jpeg" alt="Bridal suite soaking tub with hexagonal tile surround, marble floors, and brass fixtures" style="object-position: center center;">
                     <span class="hotel__image-label">Bridal Suite &mdash; Opening Spring 2026</span>
                 </div>
             </div>
@@ -2587,7 +2691,6 @@
          DAY SPA SECTION
          ============================================================ -->
     <section class="spa section section--charcoal" id="spa">
-        <!-- Replace with actual spa photo -->
         <div class="spa__bg" aria-hidden="true"></div>
         <div class="spa__content reveal">
             <span class="section-label">Day Spa</span>
@@ -2697,7 +2800,7 @@
                         <li>
                             <span class="contact__details-label">Email</span>
                             <span class="contact__details-value">
-                                <a href="mailto:hello@theminers1928.com">hello@theminers1928.com</a>
+                                <a href="mailto:info@theminers1928.com">info@theminers1928.com</a>
                             </span>
                         </li>
                         <li>
@@ -2720,7 +2823,7 @@
                     </div>
                 </div>
 
-                <form class="contact__form reveal reveal-right" action="#" method="POST">
+                <form class="contact__form reveal reveal-right" action="mailto:info@theminers1928.com" method="POST" enctype="text/plain">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Name</label>
@@ -2794,8 +2897,8 @@
                         Be the first to know about our grand opening, exclusive events,
                         and special offers.
                     </p>
-                    <form class="footer__newsletter-form" action="#" method="POST">
-                        <input type="email" placeholder="Your email address" required aria-label="Email for newsletter">
+                    <form class="footer__newsletter-form" action="mailto:info@theminers1928.com" method="POST" enctype="text/plain">
+                        <input type="email" name="email" placeholder="Your email address" required aria-label="Email for newsletter">
                         <button type="submit">Subscribe</button>
                     </form>
                 </div>
