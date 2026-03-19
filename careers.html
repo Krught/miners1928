@@ -384,6 +384,16 @@
             animation: fadeInUp 1s ease 1.3s forwards;
         }
 
+        .careers-hero__cta {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            opacity: 0;
+            animation: fadeInUp 1s ease 1.6s forwards;
+        }
+
         .careers-hero__frame {
             position: absolute;
             inset: 30px;
@@ -570,7 +580,7 @@
         .registration__frame iframe {
             display: block;
             width: 100%;
-            min-height: 1100px;
+            min-height: 1300px;
             border: none;
         }
 
@@ -914,7 +924,7 @@
             .job-fair__dates { grid-template-columns: 1fr; max-width: 400px; }
 
             .footer__top { grid-template-columns: 1fr; gap: 40px; }
-            .registration__frame iframe { min-height: 1150px; }
+            .registration__frame iframe { min-height: 1400px; }
         }
 
         @media (max-width: 768px) {
@@ -924,6 +934,8 @@
             .nav { padding: 0 24px; }
 
             .careers-hero { padding: 160px 0 80px; }
+            .careers-hero__cta { flex-direction: column; align-items: center; }
+            .careers-hero__cta .btn { width: 100%; max-width: 320px; text-align: center; }
             .careers-hero__frame { inset: 16px; }
             .apply__steps { grid-template-columns: 1fr; }
             .apply__cta { flex-direction: column; align-items: center; }
@@ -1003,6 +1015,10 @@
                 interested candidates to attend one of our upcoming job fair dates to learn more about our
                 open positions and meet with our hiring team.
             </p>
+            <div class="careers-hero__cta">
+                <a href="#register" class="btn btn--filled">Register for Job Fair</a>
+                <a href="./documents/Miners-Hotel-Employment-Application.pdf" class="btn" download>Download Application</a>
+            </div>
         </div>
     </section>
 
