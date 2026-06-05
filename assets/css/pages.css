@@ -245,6 +245,9 @@
 
 .feature-split--reverse .feature-split__media { order: 2; }
 
+/* top-align columns (for two text columns of different lengths) */
+.feature-split--top { align-items: start; }
+
 .feature-split__media img {
     width: 100%;
     height: 100%;
