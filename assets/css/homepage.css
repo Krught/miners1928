@@ -435,10 +435,10 @@ p {
     inset: 0;
     background: linear-gradient(
         180deg,
-        rgba(10, 10, 10, 0.4) 0%,
-        rgba(10, 10, 10, 0.1) 40%,
-        rgba(10, 10, 10, 0.3) 70%,
-        rgba(10, 10, 10, 0.9) 100%
+        rgba(10, 10, 10, 0.55) 0%,
+        rgba(10, 10, 10, 0.28) 40%,
+        rgba(10, 10, 10, 0.45) 70%,
+        rgba(10, 10, 10, 0.92) 100%
     );
 }
 
@@ -479,6 +479,27 @@ p {
     z-index: 2;
     max-width: 900px;
     padding: 0 40px;
+    isolation: isolate;
+}
+
+/* Soft feathered "frosted halo" behind the hero text — keeps the copy
+   legible over a busy photo without a hard panel edge. */
+.hero__content::before {
+    content: '';
+    position: absolute;
+    inset: -8% -6%;
+    z-index: -1;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(6, 9, 8, 0.62) 0%,
+        rgba(6, 9, 8, 0.38) 45%,
+        transparent 72%
+    );
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    -webkit-mask: radial-gradient(ellipse at center, #000 0%, #000 42%, transparent 72%);
+    mask: radial-gradient(ellipse at center, #000 0%, #000 42%, transparent 72%);
+    pointer-events: none;
 }
 
 .hero__est {
@@ -499,6 +520,7 @@ p {
     color: var(--cream);
     margin-bottom: 12px;
     letter-spacing: 0.04em;
+    text-shadow: 0 2px 30px rgba(0, 0, 0, 0.45);
     opacity: 0;
     animation: fadeInUp 1.2s ease 0.6s forwards;
 }
