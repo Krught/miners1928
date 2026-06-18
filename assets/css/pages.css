@@ -510,6 +510,41 @@
 /* ------------------------------------------------------------
    GALLERY
    ------------------------------------------------------------ */
+.menu-pages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+.menu-page {
+    display: block;
+    border: 1px solid rgba(201, 169, 110, 0.25);
+    overflow: hidden;
+    transition: border-color var(--transition-smooth);
+}
+
+.menu-page img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.menu-page:hover { border-color: var(--gold); }
+
+.menu-note {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--gray-light);
+}
+
+@media (max-width: 600px) {
+    .menu-pages { grid-template-columns: 1fr; max-width: 420px; }
+}
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

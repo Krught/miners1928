@@ -39,7 +39,7 @@ const PAGES = {
 };
 
 // images that are part of the layout, not content photos — never numbered
-const SKIP_IMAGES = new Set(['the_miners_logo.png', 'favicon.svg']);
+const SKIP_IMAGES = new Set(['the_miners_logo.png', 'favicon.svg', 'MENU-1.PNG', 'MENU-2.PNG']);
 
 // human-friendly page titles for the checklist
 const TITLES = {
